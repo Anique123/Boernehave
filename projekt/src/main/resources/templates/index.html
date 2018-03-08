@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Forside</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Layout.css}" />
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Kids</h1>
+<h3>Enrolled Kids at Roskilde Frie Børnehave</h3>
+<a href="Medlem.html"><button class="btn-barn">Registrer nyt Barn</button></a>
+<table>
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Fødselsdato</th>
+        <th>Forælders navn</th>
+        <th>Forælders TLF</th>
+        <th>Funktioner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="kid: ${kids}">
+        <td th:text="${kid.firstName}" />
+        <td th:text="${kid.lastName}" />
+        <td th:text="${kid.birthDate}" />
+        <td th:text="${kid.parentName}" />
+        <td th:text="${kid.TLF}" />
+        <td>
+            <a href="Rediger.html"><button class="btn-rediger">Rediger</button></a>
+            <a href="slet.html"><button class="btn-slet">Slet</button></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
