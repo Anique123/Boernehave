@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Enrollment</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Layout.css}" />
+</head>
+<body>
+<h1>Enroll Child</h1>
+<form method="Post" th:action="@{/create}">
+    <p>First Name:</p>
+    <input   type="text"   th:field="${kids.firstName}"   />
+    <p>Last Name:</p>
+    <input   type="text"   th:field="${kids.lastName}"/>
+    <p>Date:</p>
+    <input   type="date"   th:field="${kids.BirthDate}"/>
+    <p>CPR-Number:</p>
+    <input   type="text"   th:field="${kids.cpr}"/>
+    <p>Parent First Name:</p>
+    <input   type="text"   th:field="${kids.parentName}"/>
+    <p>Parent Last Name:</p>
+    <input   type="text"   th:field="${kids.TLF}"/>
+
+    <input   type="submit"   value="Send"   />
+</form>
+</body>
+</html>
