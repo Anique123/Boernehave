@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h1>Update information</h1>
+<form method="Post" th:action="@{/edit}">
+    <label>Student id:</label>
+    <input id="studentIDInput" type="text" th:field="${student.studentID}" readonly="true">
+    <label>Enter first name:</label>
+    <input type="text" th:field="${student.firstName}" required="true">
+    <label>Enter last name:</label>
+    <input type="text" th:field="${student.lastName}" required="true">
+    <label>Enter enrollment date:</label>
+    <input type="date" th:field="${student.enrollmentDa2te}" required="true">
+    <label>Cpr:</label>
+    <input type="text" th:field="${student.cpr}" required="true">
+    <input type="submit" value="Send">
+</form>
+</body>
+</html>
