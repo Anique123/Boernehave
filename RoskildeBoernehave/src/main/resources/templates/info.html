@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Layout.css}" />
+</head>
+<body>
+<h1>Details</h1>
+<p th:text="'ID: ' + ${kid.studentId}"/>
+<p th:text="'First Name: ' + ${kid.firstName}"/>
+<p th:text="'LastName: ' + ${kid.lastName}"/>
+<p th:text="'Enrollment Date: ' + ${kid.enrollmentDate}"/>
+<p th:text="'CPR: ' + ${kid.cpr}"/>
+
+<h2 th:text="'Enrollments for ' + ${kid.firstName} + ' ' + ${kid.lastName}"></h2>
+<p>The content here will come later</p>
+
+</body>
+</html>
