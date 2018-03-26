@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>delete</title>
+</head>
+<body>
+<h2>Are you sure you want to delete</h2>
+
+<form action="#" th:action="@{/delete}"  method="post" >
+    <p th:text="${kids.firstName + ' ' +  kids.lastName}"></p>
+    <input type="hidden"  th:field="${kids.kidId}"  />
+    <input type="submit" value="YES" class="btn btn-del w"/>
+    <a href="/" class="btn btn-create w" >NO</a>
+</form>
+</body>
+</html>

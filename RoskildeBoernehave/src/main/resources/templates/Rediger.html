@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h1>Update information</h1>
+<form method="Post" th:action="@{/Rediger}">
+    <p>Enter first name:</p>
+    <input type="text" th:field="${kids.firstName}" required="true" />
+    <p>Enter last name:</p>
+    <input type="text" th:field="${kids.lastName}" required="true" />
+    <p>Enter enrollment date:</p>
+    <input type="date" th:field="${kids.birthDate}" required="true" />
+    <p>Parent Name:</p>
+    <input type="text" th:field="${kids.parentName}" required="true" />
+    <p>Parent TLF:</p>
+    <input type="text" th:field="${kids.TLF}" required="true" />
+
+    <input type="submit" value="Gem" />
+</form>
+</body>
+</html>
